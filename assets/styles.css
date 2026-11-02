@@ -216,3 +216,4 @@ h1 em{color:var(--coral)}
   .edu::after{width:130px;height:130px;right:-50px;top:-50px}
 }
 .edu-single{grid-template-columns:1fr !important;max-width:760px}
+.desk-note{margin-top:10px;font-size:13px;color:var(--muted);font-style:italic}
